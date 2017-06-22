@@ -35,14 +35,13 @@ curl https://xyz.execute-api.us-east-1.amazonaws.com/dev/api
 ### Get
 Fetches a single item from the database.
 ```bash
-# Replace the <id> part with a real id from your todos table
+# Replace <id> with the item's uuid number.
 curl https://xyz.execute-api.us-east-1.amazonaws.com/dev/api/<id>
 ```
 
 ### Delete
 Erases an item from the database.
 ```bash
-# Replace the <id> part with a real id from your todos table
 curl -X DELETE https://xyz.execute-api.us-east-1.amazonaws.com/dev/api/<id>
 ```
 
