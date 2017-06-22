@@ -12,6 +12,9 @@ def list(event, context):
 
     response = {
         "statusCode": 200,
+        "headers": {
+            "Access-Control-Allow-Origin" : "*"
+        },
         "body": json.dumps(objs['Items'])
     }
     return response
