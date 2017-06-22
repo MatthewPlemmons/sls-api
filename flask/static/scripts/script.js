@@ -1,7 +1,17 @@
 $(function () {
   listItems();
+
+  // When button is clicked, collect form data.
+  $('button').click(function () {
+    // Function not working yet.
+    let data = $('form').serializeArray();
+    console.log(data);
+    createUser(data);
+  });
+
 });
 
+// Update HTML table with all database items.
 function listItems () {
   $.getJSON('https://yz7z1tqx0e.execute-api.us-east-1.amazonaws.com/dev/api', (data) => {
     let users = [];
@@ -13,4 +23,9 @@ function listItems () {
     const e = document.getElementById('data-table');
     e.insertAdjacentHTML('beforeEnd', users.join(""));
   });
+}
+
+// Create a new database item.
+function createUser(data) {
+  console.log(data);
 }
