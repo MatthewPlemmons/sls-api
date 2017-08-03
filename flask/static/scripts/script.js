@@ -13,7 +13,7 @@ $(function () {
 
 // Update HTML table with all database items.
 function listItems () {
-  $.getJSON('https://yz7z1tqx0e.execute-api.us-east-1.amazonaws.com/dev/api', (data) => {
+  $.getJSON('', (data) => {
     let users = [];
     $(data).each(function (i) {
       users.push("<tr><td>" + data[i].name + "</td>" +
